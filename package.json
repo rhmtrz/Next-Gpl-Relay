@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next",
+    "dev": "next -p 3030",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "relay": "relay-compiler --watch --src ./pages --schema ./schema/schema.graphql",
+    "schema": "graphql get-schema --project next-graphql"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +22,9 @@
     "react-relay": "^1.6.2",
     "relay-devtools": "^1.4.0",
     "watchman": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-plugin-relay": "^1.6.2",
+    "relay-compiler": "^1.6.2"
   }
 }
