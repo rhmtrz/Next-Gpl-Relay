@@ -1,6 +1,7 @@
 import React from 'react';
 import { createFragmentContainer, graphql} from 'react-relay';
 import TodoList from './todo-list';
+import AddTodo from './add-todo';
 
 const TodoContainer = (props) => {
   const { viewer } = props
@@ -8,6 +9,7 @@ const TodoContainer = (props) => {
     <div>
       <p>This is ID: {viewer.id}</p>
       <p>This is Total: {viewer.totalCount}</p>
+      <AddTodo viewer={viewer} />
       <TodoList viewer={viewer} />
     </div>
   )
