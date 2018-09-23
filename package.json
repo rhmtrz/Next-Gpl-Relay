@@ -9,7 +9,8 @@
     "build": "next build",
     "start": "next start",
     "relay": "relay-compiler --watch --src ./pages --schema ./schema/schema.graphql",
-    "schema": "graphql get-schema --project next-graphql"
+    "schema": "graphql get-schema --project next-graphql",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "keywords": [],
   "author": "",
@@ -17,13 +18,15 @@
   "dependencies": {
     "graphql": "^14.0.2",
     "next": "^6.1.2",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-relay": "^1.6.2",
     "relay-devtools": "^1.4.0",
     "watchman": "^1.0.0"
   },
   "devDependencies": {
+    "@storybook/react": "^3.4.11",
+    "babel-core": "^6.26.3",
     "babel-plugin-relay": "^1.6.2",
     "relay-compiler": "^1.6.2"
   }
