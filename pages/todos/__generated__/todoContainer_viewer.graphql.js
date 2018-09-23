@@ -8,11 +8,13 @@
 
 /*::
 import type { ConcreteFragment } from 'relay-runtime';
+type todoList_viewer$ref = any;
 import type { FragmentReference } from "relay-runtime";
 declare export opaque type todoContainer_viewer$ref: FragmentReference;
 export type todoContainer_viewer = {|
   +id: string,
   +totalCount: ?number,
+  +$fragmentRefs: todoList_viewer$ref,
   +$refType: todoContainer_viewer$ref,
 |};
 */
@@ -38,9 +40,14 @@ const node/*: ConcreteFragment*/ = {
       "name": "totalCount",
       "args": null,
       "storageKey": null
+    },
+    {
+      "kind": "FragmentSpread",
+      "name": "todoList_viewer",
+      "args": null
     }
   ]
 };
 // prettier-ignore
-(node/*: any*/).hash = '009238c58d3852d00c8d5e44596d06f6';
+(node/*: any*/).hash = 'adad76451ae2548fdb8a9d491cc67ae7';
 module.exports = node;
